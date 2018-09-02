@@ -1,0 +1,102 @@
+/* css预定义变量 */
+:root{
+  /* Grays */
+  /* ------------------------- */
+  --black-color:                #000;
+  --gray-dark:                  #2D2F33;  /* 主要文字 */
+  --gray:                       #5A5E66;  /* 常规文字 */
+  --gray-light:                 #878D99;  /* 次要文字 */
+  --gray-lighter:               #B4BCCC;  /* 占位文字 */
+
+  /* Accent colors */
+  /* ------------------------- */
+  --blue:                       #3587ff;
+  --green:                      #67C23A;
+  --red:                        #FA5555;
+  --orange:                     #EB9E05;
+
+  /* Scaffolding */
+  /* ------------------------- */
+  --body-background:            #f6f7fb;
+  --text-color:                 var(--gray-dark);
+
+  /* Links */
+  /* ------------------------- */
+  --link-color:                 #08c;
+  --link-color-hover:           #66b1ff;
+
+  /* Typography */
+  /* ------------------------- */
+  --font-family:                Microsoft YaHei,tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+  --font-size:                  12px;
+  --line-height:                1.5;
+
+  /* Component sizing */
+  /* ------------------------- */
+  --border-radius:              4px;
+  --border-radius-large:        6px;
+  --border-radius-small:        3px;
+  --border-color:               #e9eae9;
+  --border:                     1px solid var(--border-color);
+
+  /* Spacing */
+  /* ------------------------- */
+  --margin-base-spacing:        15px;
+  --padding-base-spacing:       15px;
+
+  /* css mixins */
+  /* ------------------------- */
+
+  --header-height: 50px;
+  /* css media query */
+  /* ------------------------- */
+}
+
+// Grays
+// -------------------------
+@black:                 #000;
+@grayDark:              #2D2F33;  // 主要文字
+@gray:                  #5A5E66;  // 常规文字
+@grayLight:             #878D99;  // 次要文字
+@grayLighter:           #B4BCCC;  // 占位文字
+// @grayDark:              #303133;  // 主要文字
+// @gray:                  #606266;  // 常规文字
+// @grayLight:             #909399;  // 次要文字
+// @grayLighter:           #C0C4CC;  // 占位文字
+@white:                 #fff;
+
+
+// Accent colors
+// -------------------------
+@blue:                  rgb(64, 158, 255);
+@green:                 #67C23A;
+@red:                   #FA5555;
+@orange:                #EB9E05;
+
+
+// Scaffolding
+// -------------------------
+@bodyBackground:        #eff7ff;
+@textColor:             @grayDark;
+
+
+// Links
+// -------------------------
+@linkColor:             #08c;
+@linkColorHover:        darken(@linkColor, 15%);
+
+// Typography
+// -------------------------
+@baseFontFamily:        "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+@baseFontSize:          14px;
+@baseLineHeight:        20px;
+
+
+// Component sizing
+// -------------------------
+
+@baseBorderRadius:      4px;
+@borderRadiusLarge:     6px;
+@borderRadiusSmall:     3px;
+
+@baseBorderColor:       #DDD;

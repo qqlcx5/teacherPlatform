@@ -1,0 +1,117 @@
+@import url(../../../assets/less/variables.less);
+.textbook-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 1600px){
+  .textbook-list{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+.textbook-list{
+  &__item{
+    background-color: #fff;
+    border-radius: @baseBorderRadius;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  &__hd{
+    border-bottom: 1px dashed @baseBorderColor;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    display: flex;
+  }
+  &__icon{
+    width: 48px;
+    height: 48px;
+    background: url('../../../assets/images/tb_1.png') no-repeat center center;
+  }
+  &__tit{
+    flex: 1;
+    margin-left: 10px;
+    height: 48px;
+    line-height: 24px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  &__bd,&__ft{
+    display: flex;
+    justify-content: space-between;
+    color: @grayLight;
+  }
+  &__ft{
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  &__grade>em, &__count>em{
+    font-style: normal
+  }
+  &__grade>em + em{
+    margin-left: 10px;
+  }
+  &__count>em{
+    color: @grayDark;
+  }
+}
+.p-textbook-detail {
+  display: flex;
+  min-height: 100%;
+  height: 100%;
+  .textbook-detail-side {
+    width: 240px;
+    background: #fff;
+    padding-top: 20px;
+    &__hd {
+      text-align: center;
+      border-bottom: 1px solid @baseBorderColor;
+      span {
+        height: 32px;
+        padding: 0 15px;
+        line-height: 32px;
+        color: #fff;
+        background-color: @blue;
+        display: inline-block;
+        border-radius: 5px 5px 0 0;
+      }
+    }
+    &__bd {
+      .menu {
+        list-style: none;
+        margin: 0;
+        padding: 20px;
+        &__item {
+          cursor: pointer;
+          margin: 10px 0;
+          padding-left: 20px;
+          background: url('../../../assets/images/file.png') no-repeat left center;
+          &.is-active {
+            color: @blue;
+          }
+        }
+      }
+    }
+  }
+  .textbook-detail-main {
+    width: 210mm;
+    background: #fff;
+    margin: 0 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    .textbook-detail-item__hd
+      + .textbook-detail-item
+      > .textbook-detail-item__hd {
+      text-align: left;
+      font-size: 14px;
+    }
+  }
+  .textbook-detail-extra {
+    width: 200px;
+    background: #fff;
+    padding: 20px;
+  }
+}

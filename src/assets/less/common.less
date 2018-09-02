@@ -1,0 +1,114 @@
+[v-cloak]{
+  display: none;
+}
+
+html,body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+html:-webkit-full-screen{
+  background-color: @bodyBackground
+}
+body{
+  font-family: @baseFontFamily;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: @textColor;
+  background: @bodyBackground;
+  word-break: break-word;
+  min-height: 600px;
+}
+
+pre{
+  font-family: inherit;
+  white-space: pre-wrap;
+}
+
+.shadow{
+  box-shadow: 0 1px 1px rgba(0,0,0,0.15)
+}
+
+.text-left{
+  text-align: left;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+
+.mt-20{
+  margin-top: 20px;
+}
+.mb-20{
+  margin-bottom: 20px;
+}
+.mr-20{
+  margin-right: 20px;
+}
+.ml-20{
+  margin-left: 20px;
+}
+.pt-20{
+  padding-top: 20px;
+}
+.pb-20{
+  padding-bottom: 20px;
+}
+
+.el-table thead tr {
+  background-color: #eff7ff;
+}
+
+.baseline {
+  display: flex;
+  align-items: baseline;
+}
+
+.el-dialog__body {
+  // dialog 中 图片大小限制，以免破坏样式
+  img {
+    max-width: 475px;
+  }
+}
+// dialog footer 下的按钮 居中
+.el-dialog__footer {
+  text-align: center;
+}
+
+.m-table-btn{
+  &__operate{
+    height: 24px;
+    width: 36px;
+    border: 0 none;
+    background: #ecf5ff;
+    color: #3587FF;
+    border-radius: 3px;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    &[disabled] {
+      cursor: not-allowed;
+      & > i {
+        color: #878D99;
+      }
+    }
+    &>i{
+      font-size: 14px;
+    }
+    &.is-delete{
+      & > i{
+        color: #ff4045
+      }
+    }
+  }
+}
+
+.lecture-icon {
+  color: rgb(64, 158, 255);
+}

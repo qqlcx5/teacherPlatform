@@ -1,0 +1,180 @@
+@import url(./variables.less);
+// 重写ELEMENT-UI样式,引入hi class，提升优先级
+// -------------------------
+
+// 重写table表头
+.el-table.hi thead th{
+  background-color: #ecf5ff
+}
+.el-table.hi .el-table--striped .el-table__body tr.el-table__row--striped.current-row td,
+.el-table.hi .el-table__body tr.current-row>td,
+.el-table.hi .el-table__body tr.hover-row.current-row>td,
+.el-table.hi .el-table__body tr.hover-row.el-table__row--striped.current-row>td,
+.el-table.hi .el-table__body tr.hover-row.el-table__row--striped>td,
+.el-table.hi .el-table__body tr.hover-row>td {
+  background-color: #F5FBFF;
+ }
+// 去掉分页导航按钮背景色
+.el-pagination.hi{
+  &.is-background .btn-next,
+  &.is-background .btn-prev,
+  &.is-background .el-pager li{
+    background-color: transparent
+  }
+  &.is-background .el-pager li.active{
+    background-color: @blue
+  }
+}
+
+// 重写面包屑导航
+.el-breadcrumb{
+  &.hi{
+    font-size: 12px;
+  }
+  .hi &__inner{
+    &, a{
+      font-weight: normal;
+    }
+  }
+  &__item:last-child &__inner{
+    color: @grayLight
+  }
+}
+
+.el-button--primary.is-plain {
+  background: #fff;
+}
+// .el-step__head.is-success {
+//   color: @blue;
+//   border-color: @blue;
+// }
+// .el-step__title.is-success {
+//   color: @blue;
+// }
+// .el-step__description.is-success {
+//   color: @blue;
+// }
+//
+.el-step__head.is-process {
+  color: @blue;
+  border-color: @blue;
+}
+.el-step__title.is-process {
+  font-weight: 700;
+  color: @blue;
+}
+.el-step__description.is-process {
+  color: @blue;
+}
+.el-tree-node:focus>.el-tree-node__content, .el-tree-node__content:hover {
+  color: @blue;
+}
+
+/** 配置toolTip几种模板 **/
+
+// 蓝色模板
+.el-tooltip__popper.is-blue {
+  .el-tooltip__popper(#3587FF, #fff)
+}
+
+/** dialog 样式 **/
+.hi-dialog{
+  .el-dialog{
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .el-dialog__header {
+    background: #f5f7f9;
+    border-bottom: 1px solid @baseBorderColor;
+    text-align: center;
+    .el-dialog__title {
+      font-size: 14px;
+    }
+  }
+}
+
+.w-800 {
+  .el-dialog{
+    width: 800px;
+  }
+}
+
+audio::-webkit-media-controls-fullscreen-button, video::-webkit-media-controls-fullscreen-button {
+  display: flex !important;
+}
+
+// dialog样式
+.m-dialog{
+  overflow: hidden;
+  border-radius: 4px;
+  & > .el-dialog__header {
+    background: #f5f7f9;
+    border-bottom: 1px solid @baseBorderColor;
+    padding-top: 10px;
+    & > .el-dialog__title {
+      font-size: 14px;
+    }
+    & > .el-dialog__headerbtn{
+      top: 15px;
+    }
+  }
+}
+
+.w-680 {
+  width: 680px;
+}
+
+/* 表格样式 */
+.m-table {
+  &-hd > th,
+  &-hd > td {
+    background-color: #ecf5ff;
+  }
+  &-btn {
+    display: inline-flex;
+    & > i {
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.3s color ease-in-out;
+      background: #ecf5ff;
+      height: 20px;
+      line-height: 20px;
+      padding: 0 5px;
+      border-radius: 2px;
+      color: var(--blue);
+      &.is-disabled {
+        --blue: var(--gray-lighter);
+        cursor: not-allowed;
+      }
+    }
+    & > i + i {
+      margin-left: 5px;
+    }
+  }
+}
+// el-tabs flex 布局
+.hi-tabs.el-tabs {
+  .el-tabs__content {
+    flex: 1 !important;
+  }
+}
+
+// el-steps 双师教材
+.hi-steps {
+  width: 30%;
+  margin: 0 auto;
+
+  .el-step__title {
+    font-size: 12px;
+    line-height: 30px;
+  }
+
+  .el-step__head.is-success {
+    color: #409eff;
+    border-color: #409eff;
+  }
+  .el-step__title.is-success {
+    color: #409eff;
+  }
+}

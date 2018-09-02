@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>教师工作平台</title>
+  <script src="http://klxxcdn.oss-cn-hangzhou.aliyuncs.com/lib/vue/2.5.6/vue.js"></script>
+  <script src="http://klxxcdn.oss-cn-hangzhou.aliyuncs.com/lib/vue-router/3.0.1/vue-router.min.js"></script>
+  <script src="http://klxxcdn.oss-cn-hangzhou.aliyuncs.com/lib/vuex/3.0.1/vuex.min.js"></script>
+  <script src="http://klxxcdn.oss-cn-hangzhou.aliyuncs.com/lib/axios/0.17.1/axios.min.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <link href="static/css/normalize.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <link rel='stylesheet' href='https://unpkg.com/nprogress@0.2.0/nprogress.css' />
+  <style>
+    .MathJax{
+      outline:0;
+      font-size:12px;
+      overflow-x:auto;
+      overflow-y:hidden;
+    }
+    .MathJax_SVG *{
+      max-width: 100%;
+    }
+  </style>
+  <link rel="dns-prefetch" href="//cdn.bootcss.com" />
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        ignoreClass: 'no-mathjax'
+      },
+      TeX: {
+        equationNumbers: {
+          autoNumber: ["AMS"],
+          useLabelIds: true
+        },
+        extensions: ["mhchem.js", "extpfeil.js"]
+      },
+      "HTML-CSS": {
+        linebreaks: {
+          automatic: true
+        },
+        availableFonts: ["STIX","TeX"],
+        scale:85,
+        minScaleAdjust:40
+      },
+      SVG: {
+        linebreaks: {
+          automatic: true
+        },
+        scale:85,
+        minScaleAdjust:40
+      },
+      showProcessingMessages: false,
+      messageStyle: "none",
+      showMathMenu: false,
+      "fast-preview": {
+        "disabled": true
+      }
+    });
+      // MathJax.Hub.Config({
+      //   showProcessingMessages: false,
+      //   messageStyle: "none",
+      //   extensions: ["tex2jax.js"],
+      //   TeX: {
+      //     extensions: ["mhchem.js","extpfeil.js"]
+      //   },
+      //   jax: ["input/TeX", "output/HTML-CSS"],
+      //   tex2jax: {
+      //     inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      //     displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+      //   },
+      //   "HTML-CSS": {
+      //     linebreaks: {
+      //       automatic: true
+      //     },
+      //     availableFonts: ["STIX","TeX"]
+      //   },
+      //   showMathMenu: false,
+      //   "fast-preview": {
+      //     "disabled": true
+      //   }
+      // });
+  </script>
+  <script type="text/javascript" async src="http://a.cdn.histudy.com/lib/mathjax/2.7.1/MathJax/MathJax.js?config=TeX-AMS-MML_SVG"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+// tooltip 模板
+.el-tooltip__popper(@backgroundColor, @color) {
+  background: @backgroundColor;
+  color: @color;
+  .popper__arrow{
+    border-top-color: @backgroundColor;
+    &::after{
+      border-top-color: @backgroundColor;
+    }
+  }
+}
